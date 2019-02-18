@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
 const cfg = require('./config');
 
 Vue.config.productionTip = false
@@ -16,8 +18,8 @@ shared.install = function(){
 	Object.defineProperty(Vue.prototype, 'globalCFG', { get() { return shared } })
 }
 
-Vue.use(shared)
-
+Vue.use(shared);
+Vue.use(BootstrapVue);
 
 new Vue({
   router,
