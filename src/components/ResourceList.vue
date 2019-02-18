@@ -9,7 +9,7 @@
 						 <th v-for="i of item" v-bind:i="i" v-bind:key="i">
 							 {{ i  }}
 							</th>
-							<th><button type="button" v-on:click="$emit('createResource', item.id)" class="btn btn-primary">Edit</button>
+							<th><button type="button" v-on:click="$emit('editResource', item)" class="btn btn-primary">Edit</button>
 							<button type="button" v-on:click="$emit('deleteResource', item.id)" class="btn btn-danger">Borrar</button> </th>
             </tr>
         </table>

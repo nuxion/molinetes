@@ -3,6 +3,10 @@
 			<div class="row justify-concent-center mb-5">
 				<div class="col-10">
 					{{ formData }}
+					<p>
+						credencial:
+						{{ credencial }}
+					</p>
 					<form>
 				  	<div class="form-group">
 							<label for="nombreCredencial">Nombre</label>
@@ -72,6 +76,7 @@ export default {
 	beforeMount: function(){
 		if (this.credencial){
 			this.formData.nombre = this.credencial.nombre;
+			this.eventSelect = this.credencial.evento_cod
 		}
 		this.getEventos();
 	},

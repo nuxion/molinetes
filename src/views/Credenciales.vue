@@ -2,6 +2,7 @@
 	<div class="container">
 		<div class="row justify-content-center text-center mb-3">
 			<div class="col-10">
+				<p>Credencial data: {{ credencialData }}</p>
 				<h1>ABM Credenciales</h1>
 			</div>
 		</div>
@@ -19,12 +20,13 @@
 				v-bind:items='credencialesResponse'
 				v-bind:head='headers'
 				v-on:deleteResource="deleteCredencial($event)"
+				v-on:editResource="editCredencial($event)"
 				/>
 			<CredencialForm
 				v-show="showform"
-				v-on:editResource="editCredencial($event)"
 				v-on:saveForm="postCredencial($event)"
 				v-on:cancelForm="closeForm()"
+				v-bind:credencial="credTest"
 				/>
 		</div>
 	</div>
@@ -48,7 +50,8 @@ export default {
 			headers: [],
 			showlist: true,
 			showform: false,
-			testData: { nombre: 'pepe' }
+			credencialData: null,
+			credTest: { nombre: 'llala' }
     } },
 	methods:{
 		deleteTest: function(event){
@@ -85,11 +88,16 @@ export default {
       	 this.showlist = true;                                                          
 			   this.showform = false;
        })                                                                              
- 		}, 
+		}, 
 		createCredencial: function(event){
 			this.showlist = false;
 			this.showform = true;
 			console.log(event);
+		},
+		editCredencial: function(event){
+			this.showlist = false;
+			this.showform = true;
+			this.credencialData = event;
 		},
 		deleteCredencial: function(event){
 			const uri = this.globalCFG.apiserver + '/credenciales/'
