@@ -24,6 +24,8 @@ export default new Router({
     { path: '/credenciales',
      component: () => import ('./views/Credenciales.vue')},
     { path: '/eventos',
-     component: () => import ('./views/Eventos.vue')}
+     component: () => import ('./views/Eventos.vue')},
+    { path: '/molinetes',
+     component: () => import ('./views/Molinetes.vue')}
   ]
 })
