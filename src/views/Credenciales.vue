@@ -105,6 +105,7 @@ export default {
         this.getCredenciales();
         this.showlist = true;
         this.showform = false;
+        this.credencialData = null;
       });
     },
     putCredencial: function(credencial) {
@@ -127,6 +128,7 @@ export default {
         this.getCredenciales();
         this.showlist = true;
         this.showform = false;
+        this.credencialData = null;
       });
     },
 
@@ -152,6 +154,7 @@ export default {
     closeForm: function() {
       this.showform = false;
       this.showlist = true;
+      this.credencialData = null;
     }
   },
   beforeMount: function() {

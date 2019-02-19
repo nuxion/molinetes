@@ -114,6 +114,7 @@ export default {
         this.getEventos();
         this.showlist = true;
         this.showform = false;
+        this.eventoData = null;
       });
     },
     putEvento: function(evento) {
@@ -135,6 +136,7 @@ export default {
         this.getEventos();
         this.showlist = true;
         this.showform = false;
+        this.eventoData = null;
       });
     },
 
@@ -160,6 +162,7 @@ export default {
     closeForm: function() {
       this.showform = false;
       this.showlist = true;
+      this.eventoData = null;
     }
   },
   beforeMount: function() {
