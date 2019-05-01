@@ -11,7 +11,7 @@
     <div v-if="showlist" class="row justify-content-center text-center mb-5">
       <div class="col-10">
         <button type="button" class="btn btn-primary" v-on:click="createEvento">
-          Crear evento
+          Create event
         </button>
       </div>
     </div>

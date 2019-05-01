@@ -4,7 +4,7 @@
       <div class="col-10">
         {{ formData }}
         <p>
-          credencial:
+          Credential:
           {{ credencial }}
         </p>
         <form>
@@ -17,7 +17,7 @@
               id="idMolinete"
               disabled
             />
-            <label for="eventoCod">Evento</label>
+            <label for="eventoCod">Event</label>
             <input
               v-model="formData.evento_cod"
               type="text"
@@ -36,7 +36,7 @@
           class="btn btn-primary"
           v-on:click="$emit('saveForm', formData)"
         >
-          Guardar</button
+          Save</button
         ><span />
       </div>
       <div class="col-2">
@@ -45,7 +45,7 @@
           class="btn btn-danger"
           v-on:click="$emit('cancelForm')"
         >
-          Cancelar
+          Cancel
         </button>
       </div>
     </div>

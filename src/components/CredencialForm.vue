@@ -4,22 +4,22 @@
       <div class="col-10">
         {{ formData }}
         <p>
-          credencial:
+          Credential:
           {{ credencial }}
         </p>
         <form>
           <div class="form-group">
-            <label for="nombreCredencial">Nombre</label>
+            <label for="nombreCredencial">Name</label>
             <input
               v-model="formData.nombre"
               type="text"
               class="form-control"
               id="nombreCredencial"
-              placeholder="Nombre del titular de la credencial"
+              placeholder="Titular name of the credential"
             />
-            <label for="eventosList">Evento</label>
+            <label for="eventosList">Event</label>
             <select class="form-control" v-model="eventSelect">
-              <option disabled value="">Seleccione un Evento</option>
+              <option disabled value="">Choose an event</option>
               <option
                 v-for="ev of eventos"
                 v-bind:key="ev.id"
@@ -28,9 +28,9 @@
               >
             </select>
             <div class="form-group" v-show="showMolinetes">
-              <label for="eventosList">Molinete</label>
+              <label for="eventosList">Turnstile</label>
               <select class="form-control" v-model="formData.molinete">
-                <option disabled value="">Seleccione un molinete</option>
+                <option disabled value="">Choose a turnstile</option>
                 <option
                   v-for="mol of molinetes"
                   v-bind:key="mol.id"
@@ -50,7 +50,7 @@
           class="btn btn-primary"
           v-on:click="$emit('saveForm', formData)"
         >
-          Guardar</button
+          Save</button
         ><span />
       </div>
       <div class="col-2">
@@ -59,7 +59,7 @@
           class="btn btn-danger"
           v-on:click="$emit('cancelForm')"
         >
-          Cancelar
+          Cancel
         </button>
       </div>
     </div>

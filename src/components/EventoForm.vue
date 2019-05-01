@@ -4,26 +4,26 @@
       <div class="col-10">
         {{ formData }}
         <p>
-          credencial:
+          Credential:
           {{ credencial }}
         </p>
         <form>
           <div class="form-group">
-            <label for="nombreEvento">Nombre</label>
+            <label for="nombreEvento">Name</label>
             <input
               v-model="formData.nombre"
               type="text"
               class="form-control"
               id="nombreEvento"
-              placeholder="Nombre del evento"
+              placeholder="Event name"
             />
-            <label for="codigoEvento">Codigo</label>
+            <label for="codigoEvento">Code</label>
             <input
               v-model="formData.cod"
               type="text"
               class="form-control"
               id="codigoCredencial"
-              placeholder="Codigo del evento"
+              placeholder="Event code"
             />
           </div>
         </form>
@@ -36,7 +36,7 @@
           class="btn btn-primary"
           v-on:click="$emit('saveForm', formData)"
         >
-          Guardar</button
+          Save</button
         ><span />
       </div>
       <div class="col-2">
@@ -45,7 +45,7 @@
           class="btn btn-danger"
           v-on:click="$emit('cancelForm')"
         >
-          Cancelar
+          Cancel
         </button>
       </div>
     </div>

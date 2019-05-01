@@ -15,7 +15,7 @@
           class="btn btn-primary"
           v-on:click="createCredencial"
         >
-          Crear credencial
+          Create credential
         </button>
       </div>
     </div>

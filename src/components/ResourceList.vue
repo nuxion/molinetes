@@ -22,7 +22,7 @@
               v-on:click="$emit('deleteResource', item.id)"
               class="btn btn-danger"
             >
-              Borrar
+              Delete
             </button>
           </th>
         </tr>
