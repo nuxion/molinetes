@@ -1,5 +1,5 @@
 
 module.exports = {
   env: 'dev',
-  apiserver: 'http://localhost:5000/api/v1',
+  apiserver: 'http://demo1.xavier.com.ar/api/v1',
 }
